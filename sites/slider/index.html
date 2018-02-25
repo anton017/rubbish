@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Study task | Slider plugin
+  </title>
+  <meta content="" name='description'/>
+  <meta content="" name='keywords'/>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+  <link href="css/application.css" rel="stylesheet"/>
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/slider.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="container_row">
+
+      <!-- First slider -->
+      <div id="slider" class="slider slider_first">
+        <div class="slider_viewport">
+          <div class="slider_list">
+            <div class="slider_item"><img src="assets/img_1.jpg"></div>
+            <div class="slider_item"><img src="assets/img_2.jpg"></div>
+            <div class="slider_item"><img src="assets/img_3.jpg"></div>
+            <div class="slider_item"><img src="assets/img_4.jpg"></div>
+          </div>
+        </div>
+        <div class="slider_nav">
+          <div class="slider_arrow slider_arrow__left"></div>
+          <div class="slider_arrow slider_arrow__right"></div>
+        </div>
+        <div class="slider_control-nav">
+          <!-- All this selectors must be created dynamically. They are here just for example -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Second slider. Carousel -->
+    <div class="container_row">      
+      <div id="carousel" class="slider slider_second">
+        <div class="slider_viewport">
+          <div class="slider_list">
+            <div class="slider_item"><img src="assets/img_1.jpg"></div>
+            <div class="slider_item"><img src="assets/img_2.jpg"></div>
+            <div class="slider_item"><img src="assets/img_3.jpg"></div>
+            <div class="slider_item"><img src="assets/img_4.jpg"></div>
+          </div>
+        </div>
+        <div class="slider_nav">
+          <div class="slider_arrow slider_arrow__left"></div>
+          <div class="slider_arrow slider_arrow__right"></div>
+        </div>
+        <div class="slider_control-nav">
+          <!-- All this selectors must be created dynamically. They are here just for example -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Third slider. Carousel -->
+    <div class="container_row">      
+      <div id="carousel_third" class="slider slider_third">
+        <div class="slider_viewport">
+          <div class="slider_list">
+            <div class="slider_item"><img src="assets/img_1.jpg"></div>
+            <div class="slider_item"><img src="assets/img_2.jpg"></div>
+            <div class="slider_item"><img src="assets/img_3.jpg"></div>
+            <div class="slider_item"><img src="assets/img_4.jpg"></div>
+          </div>
+        </div>
+        <div class="slider_nav">
+          <div class="slider_arrow slider_arrow__left"></div>
+          <div class="slider_arrow slider_arrow__right"></div>
+        </div>
+        <div class="slider_control-nav">
+          <!-- All this selectors must be created dynamically. They are here just for example -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var $slider = $('#slider').slider();
+    var $carousel = $('#carousel').slider({
+      interval: 3000,
+      items: 2,
+      loop: true,
+      imgWidth: 300,
+      callback: function(number) {
+        console.log('Current carousel slide - ' + number);
+      }
+    });
+    var $carousel = $('#carousel_third').slider({
+      interval: 2000,
+      items: 3,
+      loop: true,
+      imgWidth: 150,
+    });
+    
+    console.log('Total number of slides - ' + $slider.getSlidesCount());
+  </script>
+
+</body>
+</html>

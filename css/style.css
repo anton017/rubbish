@@ -1,0 +1,152 @@
+/* HTML5 display-role reset for older browsers */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+form input[type="submit"] {
+  cursor: pointer;
+}
+/*BODY*/
+a {
+  text-decoration: none; 
+  color: #000;
+  font-size: 1.5em;
+}
+nav ul{
+  top:0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+nav ul li {
+  width: 20%;
+  float: left;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  box-sizing: border-box;
+}
+nav ul a {
+  display: block;
+  padding: 5px;
+  text-align: center;   
+  background: #fff;
+  box-shadow: inset 0px 0px 25px -5px rgba(0,0,0,0.89);
+}
+nav ul li:first-child {
+  border-left: 2px solid black; 
+}
+.current a  {
+  background: #99ff99;
+}
+.p-none a:hover {
+  background: red;
+}
+nav ul a:hover {
+  background: #99ff99;
+}
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1%;
+}
+.quickly {
+  padding: 1%;
+  padding-top: 50px;
+  text-align: center;
+}
+.red {
+  font-size: 1.25em;
+  color: red;
+  font-weight: bold;
+}
+.quickly span{
+  display: inline-block;
+  margin-top: 0.5%;
+}
+.quickly span:last-child {
+  margin-bottom: 1%;
+} 
+.form, .flexbox, .selector, .footer, .text, .svg{
+  width: 100%;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+  position: relative;
+}
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+.form-l, .flexbox-l, .selector-l, .footer-l, .text-l, .svg-l{
+  width: 50%;
+  padding: 1%;
+  box-sizing: border-box;
+  float: left;
+  border-right: 2px solid black;
+  /* position: absolute;
+  min-height: 100%; */
+}
+.form-r, .footer-r, .svg-r{
+  width: 50%;
+  padding: 1%;
+  box-sizing: border-box;
+  float: right;
+}
+.green,.element span {
+  font-size: 1.25em;
+  color: green;
+  font-weight: bold;
+}
+span, p .blue {
+  font-size: 1.25em;
+  color: blue;
+  font-weight: bold;
+}
+code {
+  display: inline-block;
+  padding: 1%;
+  background: #d0e3f7;
+  white-space: pre;
+  line-height: 10px;
+}
+

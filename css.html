@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src=""></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="http://fry.esy.es/">Fry</a></li>
+      <li><a href="html.html">HTML</a></li>
+      <li class="current"><a href="css.html">CSS</a></li>
+      <li class="p-none"><a href="">LESS</a></li>
+      <li class="p-none"><a href="">GIT</a></li>
+    </ul>
+  </nav>
+  <section class="quickly">
+    <h1>Принципы быстродействия</h1>
+    <span class="blue">Размещение ссылок на стили наверху страницы.</span><br>
+    <span class="blue">Размещение JavaScript внизу (насколько это возможно).</span><br>
+    <span class="blue">Делать как можно меньше HTTP-запросов.</span><br>
+    <span class="blue">Раздавать ресурсы с нескольких доменов, можно увеличить количество ресурсов, которые браузер будет загружать параллельно.</span><br>
+    <span class="blue">Никогда не раздавайть CSS с отдельного домена, поскольку это приводит к задерживающим отрисовку DNS-запросам.</span><br>
+    <span class="blue">Вставляйть CSS в HTML-код как можно раньше, чтобы браузер мог скачать его и заняться другими вещами.</span><br>
+    <span class="blue">Собирайть CSS в один файл. Браузер все равно скачает весь CSS, поэтому гораздо лучше просто собрать все, в один HTTP-запрос.</span><br>
+    <span class="blue">Сжать его с помощью gzip и минифицировать, чтобы браузеру пришлось загружать меньше.</span><br>
+    <span class="blue">Закэшировать все, что можно, чтобы весь этот процесс происходил как можно реже.</span><br>  
+  </section>
+  <div class="selector">
+    <section class="selector-l">
+      <h1>Селекторы</h1>
+      <p><span class="green">селектор1 + селектор2 </span>стили приминяются к соседнему селектору <span class="green">селектор2</span></p>
+      <p><span class="green">селектор1 > селектор2 > селектор3 </span>стили приминяются к дочернему селектору <span class="green">селектор3</span></p>
+      <p><span class="green">селектор:псевдокласс </span>псевдокласс добавляется к селектору c помощью символа <span class="green">:</span></p>
+      <p><span class="blue">a:link </span>выбирает ещё не посещённые ссылки<p>
+      <p><span class="blue">a:visited </span>выбирает посещённые ссылки<p>
+      <p><span class="blue">a:active </span>выбирает активные ссылки (кнопка мыши зажата на ссылке)<p>
+    </section>
+  </div>
+  
+  <div class="flexbox">
+    <section class="flexbox-l">
+      <h1>Flexbox</h1>
+      <p class="element"><span>justify-content </span>- выравнивает элементы горизонтально</p>
+      <p><span>flex-start: </span>Элементы выравниваются по левой стороне контейнера.</p>
+      <p><span>flex-end: </span>Элементы выравниваются по правой стороне контейнера.</p>
+      <p><span>center: </span>Элементы выравниваются по центру контейнера.</p>
+      <p><span>space-between: </span>Элементы отображаются с одинаковыми отступами между ними.</p>
+      <p><span>space-around: </span>Элементы отображаются с одинаковыми отступами вокруг них.</p> 
+      <p class="element"><span>align-items(align-self) </span>- выравнивает элементы вертикально</p>
+      <p><span>flex-start: </span> Элементы выравниваются по верхнему краю контейнера.</p>
+      <p><span>flex-end: </span>Элементы выравниваются по нижнему краю контейнера.</p>
+      <p><span>center: </span>Элементы выравниваются вертикально по центру контейнера.</p>
+      <p><span>space-between: </span> Элементы отображаются на базовой линии контейнера.</p>
+      <p><span>space-around: </span>Элементы растягиваются, чтоб заполнить контейнер.</p>
+      <p class="element"><span>flex-direction </span>направление, в котором будут расположены элементы в контейнере</p>
+      <p><span>row: </span> Элементы размещаются по направлению текста.</p>
+      <p><span>row-reverse: </span>Элементы отображаются в обратном порядке к направлению текста.</p>
+      <p><span>column: </span>Элементы распологаются сверху вниз.</p>
+      <p><span>column-reverse: </span> Элементы распологаются снизу вверх.</p>
+      <p class="element"><span>order </span>порядка отображения элементов в контейнере</p>
+      <p class="element"><span>flex-wrap </span>отображение елементов в ряду</p>
+      <p><span>nowrap: </span> Размеры элементов устанавливаются автоматически, чтоб они поместились в один ряд.</p>
+      <p><span>wrap: </span>Элементы автоматически переносятся на новую строку.</p>
+      <p><span>wrap-reverse: </span>Элементы автоматически переносятся на новую строку, но строки расположены в обратном порядке.</p>
+      <p class="element"><span>flex-flow </span>два в одном <span class="blue">flex-direction</span> и <span class="blue">flex-wrap</span></p>
+      <p class="element"><span>align-content </span>указывает, как несколько рядов должны отделяться друг от друга</p>
+      <p><span>flex-start: </span> Ряды группируются в верхней части контейнера.</p>
+      <p><span>flex-end: </span>Ряды группируются в нижней части контейнера.</p>
+      <p><span>center: </span>Ряды группируются вертикально по центру контейнера.</p>
+      <p><span>space-between: </span>Ряды отображаются с одинаковыми расстояниями между ними.</p>
+      <p><span>space-around: </span>Ряды отображаются с одинаковыми расстояниями вокруг них.</p>
+      <p><span>stretch: </span>Ряды растягиваются, чтоб заполнить контейнер равномерно.</p>
+    </section>
+  </div>
+  <div class="text">
+    <section class="text-l">
+      <h1>Text</h1>
+      <p class="element"><span>white-space </span>- управляет пробелами и переносами</p>
+      <p><span>nowrap </span>- отображает весь текст одной строкой без переносов;</p>
+      <p><span>pre </span>- сохраняет пробелы и переносы как в исходном коде аналогично тегу pre;</p>
+      <p><span>pre-wrap </span>- работает как значение pre, но добавляет автоматические переносы, если текст не помещается в контейнер;</p>
+      <p><span>normal </span>- режим по умолчанию.</p>
+    </section>
+  </div>
+</body>
+
+</html>
+
