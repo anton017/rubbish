@@ -5,15 +5,15 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
   <script src=""></script>
 </head>
 <body>
   <nav>
     <ul>
-      <li><a href="http://fry.esy.es/">Fry</a></li>
-      <li><a href="html.html">HTML</a></li>
-      <li class="current"><a href="css.html">CSS</a></li>
+      <li><a href="../index.html">Fry</a></li>
+      <li class="current"><a href="html.html">HTML and CSS</a></li>
+      <li><a href="features.html">Features</a></li>
       <li class="p-none"><a href="">LESS</a></li>
       <li class="p-none"><a href="">GIT</a></li>
     </ul>
@@ -30,7 +30,7 @@
     <span class="blue">Сжать его с помощью gzip и минифицировать, чтобы браузеру пришлось загружать меньше.</span><br>
     <span class="blue">Закэшировать все, что можно, чтобы весь этот процесс происходил как можно реже.</span><br>  
   </section>
-  <div class="selector">
+  <div class="selector clearfix">
     <section class="selector-l">
       <h1>Селекторы</h1>
       <p><span class="green">селектор1 + селектор2 </span>стили приминяются к соседнему селектору <span class="green">селектор2</span></p>
@@ -41,8 +41,7 @@
       <p><span class="blue">a:active </span>выбирает активные ссылки (кнопка мыши зажата на ссылке)<p>
     </section>
   </div>
-  
-  <div class="flexbox">
+  <div class="flexbox clearfix">
     <section class="flexbox-l">
       <h1>Flexbox</h1>
       <p class="element"><span>justify-content </span>- выравнивает элементы горизонтально</p>
@@ -77,7 +76,7 @@
       <p><span>stretch: </span>Ряды растягиваются, чтоб заполнить контейнер равномерно.</p>
     </section>
   </div>
-  <div class="text">
+  <div class="text clearfix">
     <section class="text-l">
       <h1>Text</h1>
       <p class="element"><span>white-space </span>- управляет пробелами и переносами</p>
@@ -87,6 +86,144 @@
       <p><span>normal </span>- режим по умолчанию.</p>
     </section>
   </div>
+  <div class="form clearfix">
+    <section class="form-l">
+      <h1>Знакомство с формами</h1>
+      <p><span class="red">form </span>cоздайт форму, нужно использовать парный тег</p>
+      <p><span class="green">action </span>задаёт адрес, URL, отправки формы;</p>
+      <p><span class="green">method </span>задаёт метод отправки формы, <span class="blue">get</span> или <span class="blue">post</span>.</p>
+      <p><span class="red">input </span>с помощью него создаётся большинство полей форм</p>
+      <p><span class="green">type </span>задаёт тип поля <span class="blue">button, checkbox, file, hidden, image, password, radio, reset, submit, text</span></p>
+      <p><span class="green">name </span>задаёт имя поля</p>
+      <p><span class="green">id </span>обозначает идентификатор</p>
+      <p><span class="green">value </span>задаёт значение поля ввода по умолчанию</p>
+      <p><span class="red">label </span>подписи к полям, <span class="green">for</span> записываем такое же значение, что и в атрибуте <span class="green">id</span> у поля</p>
+      <p><span class="red">textarea </span>многострочное текстовое поле создаётся с помощью парного тега</p>
+      <p><span class="green">rows </span>принимает целочисленное значение и задаёт высоту многострочного поля в строках</p>
+      <p><span class="green">cols </span>задаёт ширину поля в символах</p>
+    </section>
+    <section class="form-r">
+      <code>
+        &ltform action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data"&gt <br>
+          &ltlabel&gtВаш пол:&lt/label <br>
+          &ltlabel&gt&ltinput type="radio"&gtМужской&lt/label&gt <br>
+          &ltlabel&gt&ltinput type="radio" checked&gtЖенский&lt/label&gt <br>
+          &ltlabel&gtМесяц и год рождения:&lt/label&gt <br>
+          &ltselect&gt <br>
+              &ltoption&gtЯнварь&lt/option&gt <br>
+         &lt/select&gt <br>
+          &ltselect&gt <br>
+              &ltoption&gt1990&lt/option&gt <br>
+          &lt/select&gt <br>
+          &ltlabel>Знакомые технологии:&lt/label&gt <br>
+          &ltselect size="4"&gt <br>
+          &ltoption>HTML&lt/option&gt <br>
+          &ltoption selected &ltCSS&lt/option&gt <br>
+          &ltoption>JavaScript&lt/option&gt <br>
+          &ltoption>Node.js&lt/option&gt <br>
+          &lt/select&gt <br>
+          &ltlabel>Фото:&lt/label&gt <br>
+          &ltinput type="file"&gt <br>
+          &ltinput type="submit" value="Сохранить"&gt <br>
+      &lt/form&gt
+      </code>
+    </section>
+  </div>
+  <div class="footer clearfix">
+    <section class="footer-l">
+      <h1>Footer</h1>
+      <p>2-ва способа прижимания футера к низу окна браузера с помощью CSS.</p>
+      <code>
+        &lthtml&gt <br>
+          &ltbody&gt <br>
+          &ltdiv class="wrapper"&gt <br>
+            &ltdiv class="content"&gt&lt/div&gt <br>
+            &ltdiv class="footer"&gt&lt/div&gt <br>
+          &ltdiv&gt <br>
+          &lt/body&gt <br>
+        &lt/html&gt
+      </code>
+      <h1>Первый способ</h1>
+      <code>
+        * {<br>
+          margin: 0;<br>
+          padding: 0;<br>
+        }<br>
+        html, body {<br>
+        height: 100%;<br>
+        }<br>
+        .wrapper {<br>
+          display: flex;<br>
+          flex-direction: column;<br>
+          height: 100%;<br>
+        }<br>
+        .content {<br>
+          flex: 1 0 auto;<br>
+        }<br>
+        .footer {<br>
+          flex: 0 0 auto;<br>
+        }
+      </code>
+    </section>
+    <section class="footer-r">
+      <h1>Второй способ</h1>
+      <code>
+        * {<br>
+          margin: 0;<br>
+          padding: 0;<br>
+        }<br>
+        html, body {<br>
+          height: 100%;<br>
+        }<br>
+        .wrapper {<br>
+          position: relative;<br>
+          min-height: 100%;<br>
+        }<br>
+          .content {<br>
+          padding-bottom: 90px;<br>
+        }<br>
+        .footer {<br>
+          position: absolute;<br>
+          left: 0;<br>
+          bottom: 0;<br>
+          width: 100%;<br>
+          height: 80px;<br>
+        }
+      </code>
+    </section>
+  </div>
+  <div class="svg clearfix">
+    <section class="svg-l">
+     <h1>SVG</h1>
+      <code>
+			  &ltsvg width="360" height="500"&gt <br>
+				  &ltrect width="320" height="400" x="20" y="20" rx="20" ry="20" fill="lemonchiffon"&gt<br>
+				  &ltcircle r="100" cx="140" cy="170" fill="crimson"&gt <br>
+				  &ltellipse rx="60" ry="80" cx="240" cy="210" fill="gold"&gt <br>
+				  &ltpolygon points="130,280 140,270 150,280" fill="crimson"&gt <br>
+				  &ltpolygon points="230,300 240,290 250,300" fill="gold"&gt <br>
+				  &ltline x1="145" y1="280" x2="150" y2="300" x3="140" y3="320" stroke="brown" stroke-width="1"&gt<br>
+				  &ltline x1="150" y1="300" x2="140" y2="320" stroke="brown" stroke-width="1" &gt <br>
+				  &ltline x1="245" y1="300" x2="250" y2="320" x3="140" y3="320" stroke="brown" stroke-width="1"&gt<br>
+				  &ltline x1="220" y1="20" x2="20" y2="90" stroke="violet" stroke-width="5" &gt <br>
+			  &lt/svg>
+	    </code>
+	  </section>
+	  <section class="svg-r">
+	      <svg width="360" height="500"> 
+				  <rect width="320" height="400" x="20" y="20" rx="20" ry="20" fill="lemonchiffon" /> 
+				  <circle r="100" cx="140" cy="170" fill="crimson"/> 
+				  <ellipse rx="60" ry="80" cx="240" cy="210" fill="gold"/> 
+				  <polygon points="130,280 140,270 150,280" fill="crimson"/> 
+				  <polygon points="230,300 240,290 250,300" fill="gold"/> 
+				  <line x1="145" y1="280" x2="150" y2="300" x3="140" y3="320" stroke="brown" stroke-width="1" /> 
+				  <line x1="150" y1="300" x2="140" y2="320" stroke="brown" stroke-width="1" /> 
+				  <line x1="245" y1="300" x2="250" y2="320" x3="140" y3="320" stroke="brown" stroke-width="1" /> 
+				  <line x1="220" y1="20" x2="20" y2="90" stroke="violet" stroke-width="5" /> 
+			  </svg>
+	    
+	  </section>
+	</div>
 </body>
 
 </html>
