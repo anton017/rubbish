@@ -53,13 +53,13 @@
   </nav>
     </HEAD><BODY bgcolor="#FFFFFF">
 
-<FORM name="contact_form" method="post" action="dumb.htm" onsubmit="return validate_form ( );">
+<FORM name="contact_form" method="post" action="dumb.htm" onsubmit="return validate_form ( );" onClick="ga('send', 'event', 'Отправка-формы', 'ДействиеОдин');">
 
 <H1>Пожалуйста введите Ваше имя.</H1>
 
 <P>Ваше имя: <INPUT type="text" name="contact_name"></P>
 
-<INPUT type="submit" name="send" value="Отправить данные"></P>
+<INPUT type="submit" name="send" value="Отправить данные" onClick="ga('send', 'event', 'отправкаФормыКнопка', 'ДействиеОдин');"></P>
 
 </FORM>
   <section class="content">
