@@ -10,6 +10,18 @@
       ga('create', 'UA-125105847-1', 'auto');
       ga('send', 'pageview');
     </script>
+   
+    function validate_form ( )
+{
+  valid = true;
+    if ( document.contact_form.contact_name.value == "" )
+    {
+      alert ( "Пожалуйста заполните поле 'Ваше имя'." );
+      valid = false;
+    }
+    return valid;
+}
+    
   <meta charset="utf-8">
   <title>Fry</title>
   <link rel="icon" href="image/favicon.ico" type="image/x-icon">
@@ -38,6 +50,17 @@
       <li class="laziness page-none"><a href="">Laziness</a></li>
     </ul>
   </nav>
+    </HEAD><BODY bgcolor="#FFFFFF">
+
+<FORM name="contact_form" method="post" action="dumb.htm" onsubmit="return validate_form ( );">
+
+<H1>Пожалуйста введите Ваше имя.</H1>
+
+<P>Ваше имя: <INPUT type="text" name="contact_name"></P>
+
+<INPUT type="submit" name="send" value="Отправить данные"></P>
+
+</FORM>
   <section class="content">
     <h2>Подвиги Фрая</h2>
     <div>
