@@ -11,16 +11,14 @@
       ga('send', 'pageview');
     </script>
    <script>
-    function validate_form ( )
-{
-  valid = true;
-    if ( document.contact_form.contact_name.value == "" )
-    {
-      alert ( "Пожалуйста заполните поле 'Ваше имя'." );
-      valid = false;
-    }
-    return valid;
-}
+    function onClickTreсking () {
+    $('[data-menu]').on('click', 'a', function(e) {
+        if (ga) {
+          ga('send', 'event', 'Меню', 'fffff';
+          console.log('kkkkkkkkkkkkkkkkk');
+        }
+    });
+};
        </script>
     
   <meta charset="utf-8">
@@ -36,8 +34,8 @@
   </header>
   <nav>
     <ul>
-      <li class="current page-html"><a onClick="ga('send', 'event', 'КнопкаОдин', 'ДействиеОдин');" href="./pages/html.html">HTML and CSS</a></li>
-      <li class="page-css"><a onClick="ga('send', 'event', 'КнопкаДва', 'ДействиеДва');" href="./pages/features.html">Features</a></li>
+      <li class="current page-html"><a onclick=onClickTreсking() href="./pages/html.html">HTML and CSS</a></li>
+      <li class="page-css"><a href="./pages/features.html">Features</a></li>
       <li class="page-less page-none"><a href="">LESS</a></li>
       <li class="git page-none"><a href="">Git</a></li>
       <li>
@@ -45,7 +43,7 @@
           <img src="image/fry-choice.png" alt="fry-choice">
         </div>
       </li>
-      <li class="sites"><a onClick="ga('send', 'event', 'Site', 'Click');" href="./pages/sites.html">Sites</a></li>
+      <li class="sites"><a href="./pages/sites.html">Sites</a></li>
       <li class="beer page-none"><a href="">Beer</a></li>
       <li class="sleep page-none"><a href="">Sleep</a></li>
       <li class="laziness page-none"><a href="">Laziness</a></li>
